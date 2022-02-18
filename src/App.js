@@ -12,7 +12,7 @@ function App() {
     setIsMailVisible(false)
   }
   return (
-    <div classMail="App">
+    <div className="App">
       <Header />
       <form>
         <div style={{ width: "100%" }}>
