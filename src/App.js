@@ -5,11 +5,18 @@ import Header from "./Component/Header"
 
 function App() {  
   const [isMailVisible, setIsMailVisible] = useState(false)
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const showMailTooltip = () => {
     setIsMailVisible(true)
   }
   const hideMailTooltip = () => {
     setIsMailVisible(false)
+  }
+  const showPasswordTooltip = () => {
+    setIsPasswordVisible(true)
+  }
+  const hidePasswordTooltip = () => {
+    setIsPasswordVisible(false)
   }
   return (
     <div className="App">
@@ -23,8 +30,8 @@ function App() {
         </div>
         <div style={{ width: "100%" }}>
           <label for="password">Mot de passe : </label>
-          <Tooltip >
-            <input type="password" name="password" id="password"  />
+          <Tooltip show={isPasswordVisible} content="Le mot de passe de votre compte">
+            <input type="password" name="password" id="password"  onClick={showPasswordTooltip} onBlur={hidePasswordTooltip} />
           </Tooltip>
         </div>
         <div style={{ width: "100%" }}>
