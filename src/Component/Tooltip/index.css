@@ -10,7 +10,7 @@
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px;
 
     position: absolute;
     z-index: 1;
@@ -20,6 +20,7 @@
 .right {
     top: -5px;
     left: 105%;
+    width: 100%;
 }
 .top {
     bottom: 100%;
@@ -29,6 +30,7 @@
 .left {
     top: -5px;
     right: 105%;
+    width: 100%;
 }
 .bottom {
     top: 100%;

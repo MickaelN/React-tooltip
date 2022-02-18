@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react"
 import "./index.css"
 import parse from "html-react-parser"
 
-const Tooltip = ({ children, content, visible, hidden }) => {
+const Tooltip = ({ children, content, visible, hidden, position }) => {
     const [isVisible, setIsVisible] = useState(false)
-    const position = "top"
     const className = `tooltiptext ${position}` + (isVisible ? " visible" : " hidden")
     useEffect(() => {
         if (typeof visible === "object") {
@@ -26,7 +25,7 @@ const Tooltip = ({ children, content, visible, hidden }) => {
         <React.Fragment>
             <div className="tooltip">{children}
                 <div className={className} >
-                    {parse(content)}
+                    {typeof content === "string" ? parse(content) : content}
                 </div>
             </div>
         </React.Fragment>
