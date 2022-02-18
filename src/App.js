@@ -4,39 +4,26 @@ import Tooltip from "./Component/Tooltip"
 import Header from "./Component/Header"
 
 function App() {  
-  const [isMailVisible, setIsMailVisible] = useState(false)
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false)
-  const showMailTooltip = () => {
-    setIsMailVisible(true)
-  }
-  const hideMailTooltip = () => {
-    setIsMailVisible(false)
-  }
-  const showPasswordTooltip = () => {
-    setIsPasswordVisible(true)
-  }
-  const hidePasswordTooltip = () => {
-    setIsPasswordVisible(false)
-  }
+ 
   return (
     <div className="App">
       <Header />
       <form>
         <div style={{ width: "100%" }}>
           <label for="mail">Adresse email : </label>
-          <Tooltip show={isMailVisible} content="L'adresse email fournit lors de l'inscription">
-            <input type="email" name="mail" id="mail" onClick={showMailTooltip} onBlur={hideMailTooltip} />
+          <Tooltip content="L'adresse email fournit lors de l'inscription" visible={["click"]} hidden={["blur"]}>
+            <input type="email" name="mail" id="mail" />
           </Tooltip>
         </div>
         <div style={{ width: "100%" }}>
           <label for="password">Mot de passe : </label>
-          <Tooltip show={isPasswordVisible} content="Le mot de passe de votre compte">
-            <input type="password" name="password" id="password"  onClick={showPasswordTooltip} onBlur={hidePasswordTooltip} />
+          <Tooltip  content="Le mot de passe de votre compte" visible={["click"]} hidden={["blur"]}>
+            <input type="password" name="password" id="password" />
           </Tooltip>
         </div>
         <div style={{ width: "100%" }}>
-          <Tooltip >
-            <a href="#" >Mot de passe oublié ?</a>
+          <Tooltip visible={["mouseover"]} hidden={["mouseout"]} content="Pour récupérer votre mot de passe">
+            <a href="#" id="lostPassword">Mot de passe oublié ?</a>
           </Tooltip>
         </div>
       </form>
