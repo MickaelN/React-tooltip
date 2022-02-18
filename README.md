@@ -1,6 +1,6 @@
-#Tooltip
+# Tooltip
 
-##Description
+## Description
 Ceci est l'ébauche d'un composant tooltip pour React.     
 Il permet de :
 - Créer des tooltips
@@ -8,7 +8,7 @@ Il permet de :
 - Gérer leur contenu (texte, html ou composant React)
 - Petit effet fade-in/out
 
-##Installation
+## Installation
 Pour commencer il faut cloner le projet sur votre machine. Puis installer les dépendances via npm ou yarn.
 ```javascript
 npm install
@@ -18,7 +18,7 @@ ou
 yarn install
 ```
 
-##Utilisation
+## Utilisation
 Pour lancer le projet il faut lancer le serveur.
 ```javascript
 npm start
