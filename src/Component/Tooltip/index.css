@@ -2,9 +2,9 @@
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -15,25 +15,33 @@
 
     position: absolute;
     z-index: 1;
-
-  }
-  .right{
+    opacity: 0;
+    transition: opacity 1s;
+}
+.right {
     top: -5px;
     left: 105%;
-  }
-  .top{
-    width: 120px;
+}
+.top {
     bottom: 100%;
     left: 50%;
-    margin-left: -60px
-  }
-  .left{
+    margin-left: -60px;
+}
+.left {
     top: -5px;
     right: 105%;
-  }
-  .bottom{
-    width: 120px;
+}
+.bottom {
     top: 100%;
     left: 50%;
-    margin-left: -60px
-  }
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext.visible {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip .tooltiptext.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
