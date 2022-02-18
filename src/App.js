@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./App.css"
 import Tooltip from "./Component/Tooltip"
+import Header from "./Component/Header"
 
 function App() {  
   const [isMailVisible, setIsMailVisible] = useState(false)
@@ -12,6 +13,7 @@ function App() {
   }
   return (
     <div classMail="App">
+      <Header />
       <form>
         <div style={{ width: "100%" }}>
           <label for="mail">Adresse email : </label>
