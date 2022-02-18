@@ -3,20 +3,20 @@ import "./App.css"
 import Tooltip from "./Component/Tooltip"
 
 function App() {  
-  const [isNameVisible, setIsNameVisible] = useState(false)
-  const showNameTooltip = () => {
-    setIsNameVisible(true)
+  const [isMailVisible, setIsMailVisible] = useState(false)
+  const showMailTooltip = () => {
+    setIsMailVisible(true)
   }
-  const hideNameTooltip = () => {
-    setIsNameVisible(false)
+  const hideMailTooltip = () => {
+    setIsMailVisible(false)
   }
   return (
-    <div className="App">
+    <div classMail="App">
       <form>
         <div style={{ width: "100%" }}>
-          <label for="lastname">Nom : </label>
-          <Tooltip show={isNameVisible}>
-            <input type="text" name="lastname" id="lastname" onClick={showNameTooltip} onBlur={hideNameTooltip} />
+          <label for="mail">Adresse email : </label>
+          <Tooltip show={isMailVisible} content="L'adresse email fournit lors de l'inscription">
+            <input type="email" name="mail" id="mail" onClick={showMailTooltip} onBlur={hideMailTooltip} />
           </Tooltip>
         </div>
         <div style={{ width: "100%" }}>
